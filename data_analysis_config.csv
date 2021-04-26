@@ -1,0 +1,11 @@
+"int(hex_str[0:4], 16) & 0xFF == 0xAB",Wake up,-
+"int(hex_str[0:8], 16) & 0xFFFF  == 0xAB12",Master chicken yawns,MOSI
+"int(hex_str[0:8], 16) & 0xFF00FF == 0xAB0034",Master dog barks,MOSI
+"int(hex_str[0:10], 16) & 0xFF0000FF == 0xAB000056",Slave hedgefog rolls,MISO
+"int(hex_str[0:4], 16) & 0xFF == 0xA5",Breakfast ready,MOSI
+"int(hex_str[0:4], 16) & 0xFF == 0xA5",Not in mood for breakfast,MISO
+"int(hex_str[0:4], 16) & 0xFF == 0x5A",Order to eat,MOSI
+"int(hex_str[0:4], 16) & 0xFF == 0x5A",Refuse to eat,MISO
+"int(hex_str[0:4], 16) & 0xFF == 0x55",End of conversation,-
+"int(hex_str[0:4], 16) & 0xFF == 0x00",test1,MISO
+"int(hex_str[0:4], 16) & 0xFF == 0xFF",test2,MOSI
