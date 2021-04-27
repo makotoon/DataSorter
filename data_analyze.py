@@ -38,24 +38,24 @@ class data_analyze:
                 for rule in list_rule:
                     hex_str_mosi, hex_str_miso = data[2], data[3]
 
-
                     if rule[2].upper() in {"MOSI", "MASTER", "-"}:
                         if eval(rule[0].replace("hex_str", "hex_str_mosi")):
                             if data[4] != '':
                                 data[4] = data[4] + "\n" + rule[1]
-                            data[4]  = data[4] + rule[1] 
+                            else:
+                                data[4]  = data[4] + rule[1] 
 
                     if rule[2].upper() in {"MISO", "SLAVE", "-"}:
                         if eval(rule[0].replace("hex_str", "hex_str_miso")):
                             if data[5] != '':
                                 data[5] = data[5] + "\n" + rule[1]
-                            data[5]  = data[5] + rule[1]
+                            else:
+                                data[5]  = data[5] + rule[1]
 
             if out_file == True:
                 with open (org_file.rstrip(".csv") + "_analyzed.csv", "w", newline="") as f:
                     writer = csv.writer(f)
                     writer.writerows(list_data_tmp)
-
 
         return list_data_tmp
 
